@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="GroupCreatorControl.ItemCtl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GroupCreatorControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="200"
+             x:Name="ItemControl">
+
+   <Grid  DataContext="{Binding ElementName=ItemControl, Path=Presenter}"
+             d:DataContext="{d:DesignInstance Type=local:ItemPresenterSample, IsDesignTimeCreatable=True}"
+             >
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="Auto"/>
+      </Grid.ColumnDefinitions>
+
+      <TextBlock 
+          Text="{Binding Value}"/>
+
+   </Grid>
+
+</UserControl>
